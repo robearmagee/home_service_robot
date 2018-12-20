@@ -3,13 +3,12 @@ xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roscore" &  # works ok
 sleep 5
 xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch home_service_bot MyWorld.launch " & # works ok
 sleep 5
-xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_gazebo gmapping_demo.launch " & # seems to work ok
+xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_gazebo gmapping_demo.launch " & #works ok
 sleep 7
-xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_rviz_launchers view_navigation.launch " & # loads ok
+xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_rviz_launchers view_navigation.launch " & # ok
 sleep 6
-#xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_teleop keyboard_teleop.launch " 
 xterm  -e  " source $CATKIN_DIR/devel/setup.bash; rosrun wall_follower wall_follower_node "
-
+# ----- xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_teleop keyboard_teleop.launch " 
 
 #xterm  -e  " source $CATKIN_DIR/devel/setup.bash; rosservice call /gazebo/set_model_state '{model_state: { model_name: mobile_base, pose: { position: { x: -2.7, y: 7.3 ,z: 0 }, orientation: {x: 0, y: 0, z: -0.676, w: 0.737}}}}'" &
 #sleep 5
