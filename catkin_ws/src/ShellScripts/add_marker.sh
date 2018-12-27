@@ -15,9 +15,12 @@ xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_gazebo amc
 sleep 8
 xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_rviz_launchers view_navigation.launch " & # ok
 sleep 7
+# launch rvis marker node
+xterm  -e  " source $CATKIN_DIR/devel/setup.bash; rosrun add_markers add_markers_node " &
+sleep 3
+xterm  -e  " source $CATKIN_DIR/devel/setup.bash; rosrun pick_objects pick_objects_node "
+sleep 3
 
-#xterm  -e  " source $CATKIN_DIR/devel/setup.bash; rosrun wall_follower wall_follower_node "
 
-
-# ----- xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_teleop keyboard_teleop.launch " 
+#rosrun add_markers add_markers_node  
 
